@@ -31,16 +31,6 @@
                                        (FilenameUtils/getName (first paths))
                                        (FilenameUtils/getFullPath (first paths))))) [res mappings]))))
 
-
-
-(defn get-mappings
-  ([zip-file-name] (get-mappings zip-file-name "mapping.json"))
-  ([zip-file-name mapping-file-name]
-  (let [json-mappings-list (f-zip/get-mapping-from-zipped-file zip-file-name mapping-file-name)]
-    (map #(Mapping. (:id %1) (:file-name %1) (:source-path %1)) json-mappings-list))))
-
-
-
 (defn -main [& args]
   (let* [mapping-file-name "mapping.json"
          app-config (load-app-config "config-data.json")
@@ -49,4 +39,8 @@
          zip-file-name (:target-path app-config)]
     (f-zip/create-zip-file zip-file-name mapping-file-name (res 0) (res 1) file-streams)))
 
+
+; (use 'clojure.stacktrace)
+; (print-cause-trace *e)
+; (print-stack-trace *e)
 ;(main)
