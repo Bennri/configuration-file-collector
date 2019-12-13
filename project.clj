@@ -1,4 +1,4 @@
-(defproject config_collector "0.1.0-SNAPSHOT"
+(defproject configCollector "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "EPL-2.0 OR GPL-2.0-or-later WITH Classpath-exception-2.0"
@@ -8,6 +8,6 @@
                  [org.clojure/data.json "0.2.6"]
                  [commons-io "2.6"]
                  [org.clojure/tools.cli "0.4.2"]]
-  :repl-options {:init-ns config-collector.core}
-  :main config-collector.core
-  :aot [config-collector.core])
+  :repl-options {:init-ns configCollector.core}
+  :main configCollector.core
+  :aot [configCollector.core])

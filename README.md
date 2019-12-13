@@ -1,4 +1,4 @@
-# config_collector
+# configCollector
 Work in progress
 
 TODO
