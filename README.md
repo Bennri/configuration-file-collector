@@ -1,12 +1,7 @@
 # configCollector
-Work in progress
 
-TODO
 
 ## Usage
-
-TODO
-
 Used configuration: `config-data.json`. Form of that JSON file:
 ```json
 {
