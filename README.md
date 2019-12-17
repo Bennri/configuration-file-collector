@@ -1,5 +1,5 @@
 # configCollector
-
+Collect configuration files on a Linux system into a zip file. And place them into the correct directory again later (on a new machine). 
 
 ## Usage
 Used configuration: `config-data.json`. Form of that JSON file:
