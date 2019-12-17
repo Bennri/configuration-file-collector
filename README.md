@@ -14,6 +14,11 @@ Used configuration: `config-data.json`. Form of that JSON file:
   "config-files": ["/your/awesome/path/to/configFile/test_file_1.txt", "/another/awesome/path/to/configFile/test_file_2"]
 }
 ```
+Place the configuration file in the same directory as your created jar file and name it `config-data.json`. 
+Run the jar file with `java -jar configCollector-1.0-standalone.jar` to collect your specified configuration files
+and create a zip file at the specified target path. 
+To place the configuration files run `java -jar configCollector-1.0-standalone.jar -c false -z your-config-zip-file.zip`.
+
 
 ## License
 
