@@ -5,7 +5,6 @@
   (:import (java.util.zip ZipOutputStream ZipEntry ZipFile)
            (org.apache.commons.io IOUtils)
            (java.io FileOutputStream File)
-           (java.nio.file Paths)
            (configCollector.records Mapping)))
 
 
@@ -62,8 +61,8 @@
                                               (enumeration-seq) vec)))))) :key-fn keyword)))
 
 (defn get-mappings
-  ([zip-file-name] (get-mappings zip-file-name "mapping.json"))
-  ([zip-file-name mapping-file-name]
+  ([^String zip-file-name] (get-mappings zip-file-name "mapping.json"))
+  ([^String zip-file-name ^String mapping-file-name]
    (let [json-mappings-list (get-mapping-from-zipped-file zip-file-name mapping-file-name)]
      (map #(Mapping. (:id %1) (:file-name %1) (:source-path %1)) json-mappings-list))))
 
@@ -71,8 +70,8 @@
 
 ;; read from input stream (zip entry) to output stream which is a file placed at the directory from
 ;; which the file was originally collected
-(defn get-zipped-files
-  ([^String zip-file-name] (get-zipped-files zip-file-name "mapping.json"))
+(defn place-zipped-files
+  ([^String zip-file-name] (place-zipped-files zip-file-name "mapping.json"))
   ([^String zip-file-name mapping-file-name]
    (let [mappings (get-mappings zip-file-name)]
      (with-open [zip-file (ZipFile. zip-file-name)]
