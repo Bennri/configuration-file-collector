@@ -15,7 +15,8 @@ will be collected and placed in the resulting zip-file.
 Place the configuration file in the same directory as your created jar file and name it `config-data.json`. 
 Run the jar file with `java -jar configCollector-1.0-standalone.jar` to collect your specified configuration files
 and create a zip file at the specified target path. 
-To place/extract the configuration files, to each directory from which it was collected, run `java -jar configCollector-1.0-standalone.jar -c false -z your-config-zip-file.zip`.
+To place/extract the configuration files, to each directory from which it was collected with this tool,
+run `java -jar configCollector-1.0-standalone.jar -c false -z your-config-zip-file.zip`.
 
 
 ## License
