@@ -10,7 +10,7 @@ Used configuration: `config-data.json`. Form of that JSON file:
 }
 ```
 where `target-path` is the file name including absolute path at which the zip file will be stored. `config-files` is
-a list of file names (including the absolute path to the file). Each file specified by the its name in the list
+a list of file names (including the absolute path to the file). Each file in the list, specified by its name, 
 will be collected and placed in the resulting zip-file.
 Place the configuration file in the same directory as your created jar file and name it `config-data.json`. 
 Run the jar file with `java -jar configCollector-1.0-standalone.jar` to collect your specified configuration files
